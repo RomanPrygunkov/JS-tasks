@@ -23,7 +23,7 @@ for (const word of arrayFromPass) {
 	}
 }
 
-if (pass!== '' && pass.length >= 3 && pass.length <= 30 && isUpperCase >= 1 && isNumber >= 1) {   // Если итоговая сумма переменных для большой буквы и цифры больше 0, то пароль валидный
+if (!pass.includes(" ") && pass.length >= 3 && pass.length <= 30 && isUpperCase >= 1 && isNumber >= 1) {   // Если итоговая сумма переменных для большой буквы и цифры больше 0, то пароль валидный
 																					
 	alert('Пароль валидный. Добро пожаловать в аккаунт!')
 
