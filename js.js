@@ -11,7 +11,7 @@ for (const word of pass) {
 	
 	
 	
-	if ( !Number(word) && word === word.toUpperCase()) {    // Если число то в "большую букву" плюсуется 0
+	if ( !Number(word) && word === word.toUpperCase() && word !==' ') {    // Если число то в "большую букву" плюсуется 0
 		isUpperCase += 1
 	}
 	
@@ -22,7 +22,7 @@ for (const word of pass) {
 	}
 }
 
-
+console.log(isUpperCase);
 
 if (pass.length > 3 && pass.length <= 30 && isUpperCase >= 1 && isNumber >= 1) {   // Если итоговая сумма переменных для большой буквы и цифры больше 0, то пароль валидный
 																					
