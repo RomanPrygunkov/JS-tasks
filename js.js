@@ -1,30 +1,20 @@
-
-
 const pass = prompt("Введите пароль", '');
 
-let isUpperCase = 0  // Переменная для большой буквы
-let isNumber = 0	// Переменная для цифры
-
-
+let isUpperCase = 0 
+let isNumber = 0
 
 for (const word of pass) {
 	
-	
-	
-	if ( !Number(word) && word === word.toUpperCase() && word !==' ') {    // Если число то в "большую букву" плюсуется 0
+	if ( !Number(word) && word === word.toUpperCase() && word !==' ') {   
 		isUpperCase += 1
 	}
 	
-	
-
 	if (Number(word) && word !== " ") {  
 		isNumber += 1
 	}
 }
 
-console.log(isUpperCase);
-
-if (pass.length > 3 && pass.length <= 30 && isUpperCase >= 1 && isNumber >= 1) {   // Если итоговая сумма переменных для большой буквы и цифры больше 0, то пароль валидный
+if (pass.length > 3 && pass.length <= 30 && isUpperCase >= 1 && isNumber >= 1) {   
 																					
 	alert('Пароль валидный. Добро пожаловать в аккаунт!')
 
